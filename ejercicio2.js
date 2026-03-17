@@ -3,4 +3,4 @@ function invertirCadena(texto){
 }
 
 let cad = invertirCadena("abcd")
-console.log(cad) 
+console.log(cad) // dcba

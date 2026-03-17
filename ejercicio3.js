@@ -11,7 +11,7 @@ function separarNumeros(arr){
         }
     }
 
-    return { pares, impares }
+    return {pares, impares}
 }
 
 let obj2 = separarNumeros([1,2,3,4,5])

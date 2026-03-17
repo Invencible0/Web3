@@ -1,32 +1,16 @@
-setTimeout(()=>{
-    console.log("Paso 1")
-
-    setTimeout(()=>{
-        console.log("Paso 2")
-
-        setTimeout(()=>{
-            console.log("Paso 3")
-        },1000)
-
-    },1000)
-
-},1000)
-
-function esperar(seg){
-    return new Promise(resolve=>setTimeout(resolve,seg))
+function paso1(){
+    return Promise.resolve("Paso 1 completado")
 }
 
-async function ejecutar(){
-
-    await esperar(1000)
-    console.log("Paso 1")
-
-    await esperar(1000)
-    console.log("Paso 2")
-
-    await esperar(1000)
-    console.log("Paso 3")
-
+function paso2(){
+    return Promise.resolve("Paso 2 completado")
 }
 
-ejecutar()
+paso1()
+.then(res=>{
+    console.log(res)
+    return paso2()
+})
+.then(res=>{
+    console.log(res)
+})

@@ -8,4 +8,3 @@ function mayorMenor(arr){
 
 let obj3 = mayorMenor([3,1,5,4,2])
 console.log(obj3)
-// { mayor:5, menor:1 }
